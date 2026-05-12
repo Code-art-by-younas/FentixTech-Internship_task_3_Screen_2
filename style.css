@@ -1,0 +1,155 @@
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --red: #8b1c1c;
+    --white: #ffffff;
+  }
+
+  body {
+    font-family: "Lato", sans-serif;
+    background: #fff;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+  }
+
+  /* ── HEADER ── */
+  .site-header {
+    background: var(--red);
+    padding: 32px 48px 40px;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  /* Logo + Title row */
+  .header-top {
+    display: flex;
+    align-items: flex-start;
+    gap: 24px;
+  }
+  .header-top img.logo {
+    height: 80px;
+    width: auto;
+    flex-shrink: 0;
+  }
+  .title-block {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .title-block h1 {
+    font-family: "Oswald", sans-serif;
+    font-size: 56px;
+    font-weight: 700;
+    line-height: 1;
+    letter-spacing: -.5px;
+  }
+  .title-block h2 {
+    font-family: "Oswald", sans-serif;
+    font-size: 24px;
+    font-weight: 400;
+    margin-top: 4px;
+    color: rgba(255,255,255,0.88);
+  }
+
+  /* Body text */
+  .header-body {
+    font-size: 13.5px;
+    line-height: 1.78;
+    color: rgba(255,255,255,0.82);
+    max-width: 700px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  /* ── CONTENT AREA ── */
+  .content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    padding: 0 48px;
+    background: #fff;
+  }
+
+  /* Category section */
+  .category {
+    display: flex;
+    flex-direction: column;
+    padding: 36px 0;
+    border-bottom: 1px solid #ebebeb;
+  }
+  .category:last-child { border-bottom: none; }
+
+  /* Heading row */
+  .cat-heading {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    margin-bottom: 24px;
+  }
+  .triangle {
+    width: 0; height: 0;
+    border-top: 14px solid transparent;
+    border-bottom: 14px solid transparent;
+    border-left: 24px solid var(--red);
+    flex-shrink: 0;
+  }
+  .cat-heading h3 {
+    font-family: "Oswald", sans-serif;
+    font-size: 38px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: #111;
+  }
+
+  /* Clubs row — flex, 5 equal columns */
+  .clubs-row {
+    display: flex;
+    justify-content: flex-start;
+  }
+
+  .club-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex: 0 0 20%;
+    padding: 4px 16px 4px 0;
+  }
+  .club-item img {
+    width: 84px;
+    height: 84px;
+    object-fit: contain;
+    margin-bottom: 8px;
+  }
+  .club-item .club-name {
+    font-size: 13px;
+    color: var(--red);
+    text-align: center;
+    line-height: 1.3;
+  }
+  .club-item .club-sub {
+    font-size: 13px;
+    font-weight: 700;
+    color: #111;
+    text-align: center;
+  }
+
+  /* ── FOOTER ── */
+  .site-footer {
+    background: var(--red);
+    padding: 48px;
+    display: flex;
+    align-items: center;
+  }
+  .site-footer p {
+    font-family: "Oswald", sans-serif;
+    font-size: 30px;
+    font-weight: 700;
+    color: #fff;
+    line-height: 1.3;
+    max-width: 520px;
+  }
