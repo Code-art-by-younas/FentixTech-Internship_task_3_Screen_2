@@ -24,17 +24,20 @@
   }
 
   /* Logo + Title row */
-  .header-top {
-    display: flex;
-    align-items: flex-start;
-    gap: 24px;
-  }
-  .header-top img.logo {
-    height: 80px;
-    width: auto;
-    flex-shrink: 0;
-  }
-  .title-block {
+  /* Header logo ka size control karne ke liye */
+.header-top img {
+  width: 120px;      /* Apni requirement ke mutabiq change kar sakte ho */
+  height: auto;      /* Image proportion maintain rahegi */
+  display: block;
+  flex-shrink: 0;
+}
+
+/* Agar aur chhota karna ho */
+.header-top img.logo {
+  max-width: 120px;
+  max-height: 120px;
+}
+.title-block {
     display: flex;
     flex-direction: column;
     justify-content: center;
